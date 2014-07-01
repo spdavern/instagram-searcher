@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instagram Searcher</title>
+	<script text="text/javascript" src="https://code.angularjs.org/1.3.0-beta.13/angular.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.3.0-beta.13/angular-animate.min.js"></script>
+	<script type="text/javascript" src="./scripts/myApp.js"></script>
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/main.css">
+	<meta charset="UTF-8">
+</head>
+<body ng-app="myApp" ng-controller="instagramSearchCtrl">
+	<img src="./img/ng-instagram.png" alt="Instagram Searcher" class="displayed">
+	<div class="center">
+		<form name="myForm" ng-submit="submit()" ui-keypress="{enter: 'submit()'}" novalidate>
+			<input type="text" name="tagInput" ng-model="data.tag" placeholder="Enter a tag to search" autofocus required>
+			<input id="submitButton" type="submit">
+			<p class="center" ng-show="data.submitted">Searching Instagram for photos tagged with "{{data.tag}}"</p>
+		</form>
+	</div>
+</body>
+<footer>
+	<div class="version">Instagram Searcher version: {{version}}</div>
+</footer>
+</html>
