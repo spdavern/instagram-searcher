@@ -1,7 +1,8 @@
 IMG.displayed {
     display: block;
     margin-left: auto;
-    margin-right: auto }
+    margin-right: auto;
+}
 .center {
 	text-align: center;
 	padding-top: 10px;
@@ -15,6 +16,22 @@ IMG.displayed {
     width: 100%;
 	text-align: center;
 }
-/** {
+.images {
+	display: inline-block !important;
+	padding: 10px;
+}
+/* AngularJS Animation */
+.my-show-hide-animation.ng-hide-add {
+  -webkit-transition:1s linear all;
+  transition:1s linear all;
+  display:inline-block!important;
+  opacity:0;
+}
+.my-show-hide-animation.ng-hide-remove {
+  opacity:1;
+}
+.my-show-hide-animation.ng-hide {
+  opacity:0;
+}/** {
   outline: 1px solid orange;
 }
